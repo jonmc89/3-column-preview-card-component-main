@@ -21,6 +21,67 @@ body {
 
 /* Main */
 
+.preview-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0;
+
+}
+
+.column {
+    width: 24rem;
+    padding: 3rem;
+
+}
+
 .one {
     background-color: var(--gold-500);
+}
+
+.two {
+    background-color: var(--cyan-800);
+}
+
+.three {
+    background-color: var(--green-950);
+}
+
+img {
+    margin-block-end: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: "Big Shoulders", Arial, sans-serif;
+    color: var(--grey-100);
+    margin-block-end: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+p {
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--white-transparent);
+    line-height: 160%;
+    margin-block-end: 2.5rem;
+}
+
+button {
+    width: 10rem;
+    letter-spacing: 0.1rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 600;
+    border-radius: 4rem;
+    border: 0.1rem solid var(--grey-100);
+    padding: 1rem 2rem;
+    color: var(--gold-500);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+button:hover {
+    border-color: var(--grey-100);
+    background-color: var(--gold-500);
+    color: var(--grey-100);
 }

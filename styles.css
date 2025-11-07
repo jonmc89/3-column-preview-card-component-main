@@ -1,0 +1,26 @@
+/* Global */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colours */
+    --gold-500: hsl(31, 77%, 52%);
+    --cyan-800: hsl(184, 100%, 22%);
+    --green-950: hsl(179, 100%, 13%);
+    --white-transparent: hsla(0, 0%, 100%, 0.75);
+    --grey-100: hsl(0, 0%, 95%);
+}
+
+body {
+    font-size: 15px;
+}
+
+/* Main */
+
+.one {
+    background-color: var(--gold-500);
+}

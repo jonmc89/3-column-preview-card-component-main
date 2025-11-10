@@ -17,6 +17,15 @@
 
 body {
     font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-100);
+}
+
+main {
+    width: 100%;
 }
 
 /* Main */
@@ -26,18 +35,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 0;
-
+    padding: 3rem;
+    border-radius: 3rem;
+    overflow: hidden;
 }
 
 .column {
-    width: 24rem;
+    width: 80%;
+    max-width: 25rem;
+    min-width: 20rem;
     padding: 3rem;
-
 }
 
+@media screen and (min-width: 80em) {
+    .preview-container {
+        flex-direction: row;
+    }
+
+    .column {
+        height: 40rem;
+    }
+}
 .one {
     background-color: var(--gold-500);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 .two {
@@ -46,6 +68,20 @@ body {
 
 .three {
     background-color: var(--green-950);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+@media screen and (min-width: 80em) {
+    .one {
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+    }
+
+    .three {
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0rem;
+    }
 }
 
 img {
@@ -53,7 +89,7 @@ img {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     font-family: "Big Shoulders", Arial, sans-serif;
     color: var(--grey-100);
     margin-block-end: 1.5rem;
@@ -61,6 +97,7 @@ h2 {
 }
 
 p {
+    font-size: clamp(1rem, 3rem, 1.2rem);
     font-family: "Lexend Deca", sans-serif;
     color: var(--white-transparent);
     line-height: 160%;
@@ -75,13 +112,47 @@ button {
     border-radius: 4rem;
     border: 0.1rem solid var(--grey-100);
     padding: 1rem 2rem;
-    color: var(--gold-500);
     cursor: pointer;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
 }
 
-button:hover {
+@media screen and (min-width: 80rem) {
+    h2 {
+        margin-block-end: 3rem;
+    }
+
+    p {
+        margin-block-end: 8rem;
+    }
+}
+
+.btn-one {
+    color: var(--gold-500);
+}
+
+.btn-one:hover {
     border-color: var(--grey-100);
     background-color: var(--gold-500);
+    color: var(--grey-100);
+}
+
+.btn-two {
+    color: var(--cyan-800);
+}
+
+.btn-two:hover {
+    border-color: var(--grey-100);
+    background-color: var(--cyan-800);
+    color: var(--grey-100);
+}
+
+.btn-three {
+    color: var(--green-950);
+}
+
+.btn-three:hover {
+    border-color: var(--grey-100);
+    background-color: var(--green-950);
     color: var(--grey-100);
 }
